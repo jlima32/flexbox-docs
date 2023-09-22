@@ -1,340 +1,452 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flexbox - Dcoumentação</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox - Documentação</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Flexbox</h1>
+      <h2>Documentação</h2>
+    </header>
 
-     <div id="menu">
-        <ol>
-            <li>flex-direction</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
-            <li>6</li>
-            <li>7</li>
-            <li>8</li>
-            <li>9</li>
-            <li>10</li>
-        </ol>
-     </div>      
-        <h1>Flexbox</h1>
-        <h2>Dcoumentação</h2>
-        <h3>Propriedades para o elemento pai (container)</h3>
-        <h3>display: flex</h3>
+    <section id="guia">
+      <div class="titulo">Guia</div>
+      <div class="guia">
+        <div id="menu">
+          <div id="menu-esq">
+            <h4>Propriedades para o elemento pai</h4>
+            <ul>
+              <li>display</li>
+              <li>flex-direction</li>
+              <li>flex-wrap</li>
+              <li>justify-content</li>
+              <li>align-itens</li>
+              <li>align-content</li>
+            </ul>
+          </div>
+          <div id="menu-dir">
+            <h4>Propriedades para os elementos filhos</h4>
+            <ul>
+              <li>order</li>
+              <li>flex-grow</li>
+              <li>align-self</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="intro">
+      <div class="titulo">Introdução</div>
+      <div class="descricao">
         <p>
-            A primeira propriedade que precia ser declarada para que o Flexbox funcione!
+          O flexbox do CSS, é um modelo de layout que facilita o design de
+          interfaces web responsivas e flexíveis, permitindo o posicionamento e
+          o alinhamento eficiente de elementos em relação ao espaço disponível,
+          simplificando o desenvolvimento de layouts complexos.
+        </p>
+      </div>
+    </section>
+
+    <section id="display">
+      <div class="titulo">display: flex</div>
+      <div class="descricao">
+        <p>
+          A primeira propriedade que precia ser declarada para que o Flexbox
+          funcione!
         </p>
         <p>
-            Algumas propriedades como flex-direction, justify-content e align-content já vem com os valores padrâo.
+          Algumas propriedades como flex-direction, justify-content e
+          align-content já vem com os valores padrâo.
         </p>
 
         <table>
-            <tr>
-                <th class="proprieade">flex-direction</th>
-                <th class="valor">row</th>
-            </tr>
-            <tr>
-                <td class="propriedade">justify-content</td>
-                <td class="valor">flex-start</td>
-            </tr>
-            <tr>
-                <td class="propriedade">align-content</td>
-                <td class="valor">flex-start</td>
-            </tr>
-            <tr>
-                <td class="propriedade"></td>
-                <td class="valor"></td>
-            </tr>
+          <tr>
+            <th class="proprieade">flex-direction</th>
+            <th class="valor">row</th>
+          </tr>
+          <tr>
+            <td class="propriedade">justify-content</td>
+            <td class="valor">flex-start</td>
+          </tr>
+          <tr>
+            <td class="propriedade">align-content</td>
+            <td class="valor">flex-start</td>
+          </tr>
+          <tr>
+            <td class="propriedade"></td>
+            <td class="valor"></td>
+          </tr>
         </table>
-        <p>Exemplo:</p>
+        <p class="exemplos">Exemplos:</p>
         <div class="container">
-            <div class="contido">1</div>
-            <div class="contido">2</div>
-            <div class="contido">3</div>
-            <div class="contido">4</div>
-            <div class="contido">5</div>
+          <div class="contido">1</div>
+          <div class="contido">2</div>
+          <div class="contido">3</div>
+          <div class="contido">4</div>
+          <div class="contido">5</div>
         </div>
-
-        <h3>flex-direction</h3>
-        <p>Determina a direção de alinhamento dos itens flexíveis dentro de um contêiner flexível.</p>
+      </div>
+    </section>
+    <section id="flex-direction">
+      <div class="titulo">flex-direction</div>
+      <div class="descricao">
+        <p>
+          Determina a direção de alinhamento dos itens flexíveis dentro de um
+          contêiner flexível.
+        </p>
         <p>Valores:</p>
         <ul>
-            <li>row: esquerda para a direita. (padrão)</li>
-            <li>row-reverse: direita para a esquerda</li>
-            <li>column: mesmo que row, mas de cima para baixo</li>
-            <li>column-reverse: mesmo que row-reverse mas de baixo para cima</li>
+          <li>row: esquerda para a direita. (padrão)</li>
+          <li>row-reverse: direita para a esquerda</li>
+          <li>column: mesmo que row, mas de cima para baixo</li>
+          <li>column-reverse: mesmo que row-reverse mas de baixo para cima</li>
         </ul>
 
-        <p>Exemplos:</p>
+        <p class="exemplos">Exemplos:</p>
         <p>flex-direction: row</p>
         <div class="flex-direction-row">
-            <div class="contido">1</div>
-            <div class="contido">2</div>
-            <div class="contido">3</div>
+          <div class="contido">1</div>
+          <div class="contido">2</div>
+          <div class="contido">3</div>
         </div>
 
         <p>flex-direction: row-reverse</p>
         <div class="flex-direction-row-reverse">
-            <div class="contido">1</div>
-            <div class="contido">2</div>
-            <div class="contido">3</div>
+          <div class="contido">1</div>
+          <div class="contido">2</div>
+          <div class="contido">3</div>
         </div>
 
         <p>flex-direction: column</p>
         <div class="flex-direction-column">
-            <div class="contido">1</div>
-            <div class="contido">2</div>
-            <div class="contido">3</div>
+          <div class="contido">1</div>
+          <div class="contido">2</div>
+          <div class="contido">3</div>
         </div>
 
         <p>flex-direction: column-reverse</p>
         <div class="flex-direction-column-reverse">
+          <div class="contido">1</div>
+          <div class="contido">2</div>
+          <div class="contido">3</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="flex-wrap">
+      <div class="titulo">flex-wrap</div>
+      <div class="descricao">
+        <p>
+          Essa propriedade permite que os itens quebrem para uma linha seguinte
+          conforme necessário, alterando seu comportamento padrão.
+        </p>
+        <p>Valores:</p>
+        <ul>
+          <li>nowrap: os itens ficarão em uma só linha. (padrão)</li>
+          <li>
+            wrap: os itens vão quebrar em múltiplas linhas, de cima para baixo
+          </li>
+          <li>
+            wrap-reverse: os itens vão quebrar em múltiplas linhas, de baixo
+            para cima
+          </li>
+        </ul>
+
+        <p class="exemplos">Exemplos:</p>
+        <div class="wrap-exemplos">
+          <p>flex-wrap: nowrap</p>
+          <div class="flex-wrap-nowrap">
             <div class="contido">1</div>
             <div class="contido">2</div>
             <div class="contido">3</div>
-        </div>
+          </div>
 
-        <h3>flex-wrap</h3>
-        <p>Essa propriedade permite que os itens quebrem para uma linha seguinte conforme necessário, alterando seu comportamento padrão.</p>
+          <p>flex-wrap: wrap</p>
+          <div class="flex-wrap-wrap">
+            <div class="contido">1</div>
+            <div class="contido">2</div>
+            <div class="contido">3</div>
+          </div>
+
+          <p>flex-wrap: wrap-reverse</p>
+          <div class="flex-wrap-reverse">
+            <div class="contido">1</div>
+            <div class="contido">2</div>
+            <div class="contido">3</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="justify-content">
+      <div class="titulo">justify-content</div>
+      <div class="descricao">
+        <p>
+          Define o alinhamento dos itens ao longo do eixo principal e auxilia na
+          distribuição do espaço disponível dentro do contêiner.
+        </p>
         <p>Valores:</p>
         <ul>
-            <li>nowrap: os itens ficarão em uma só linha. (padrão)</li>
-            <li>wrap: os itens vão quebrar em múltiplas linhas, de cima para baixo</li>
-            <li>wrap-reverse: os itens vão quebrar em múltiplas linhas, de baixo para cima</li>
+          <li>
+            flex-start: os ítens são alinhados junto à borda de início. (padrão)
+          </li>
+          <li>flex-end: os ítens são alinhados junto à borda final.</li>
+          <li>center: os ítens são centralizados na linha.</li>
+          <li>
+            space-between: os ítens são distribuídos de forma igual ao longo da
+            linha.
+          </li>
+          <li>
+            space-around: os ítens são distribuídos na linha com o mesmo
+            espaçamento entre eles.
+          </li>
+          <li>
+            space-evenly: os ítens são distribuídos de forma que o espaçamento
+            entre quaisquer dois itens da linha seja igual.
+          </li>
         </ul>
 
-        <p>Exemplos:</p>
-        <div class="wrap-exemplos">
-            <p>flex-wrap: nowrap</p>
-            <div class="flex-wrap-nowrap">
-                <div class="contido">1</div>
-                <div class="contido">2</div>
-                <div class="contido">3</div>
-            </div>
-
-            <p>flex-wrap: wrap</p>
-            <div class="flex-wrap-wrap">
-                <div class="contido">1</div>
-                <div class="contido">2</div>
-                <div class="contido">3</div>
-            </div>
-
-            <p>flex-wrap: wrap-reverse</p>
-            <div class="flex-wrap-reverse">
-                <div class="contido">1</div>
-                <div class="contido">2</div>
-                <div class="contido">3</div>
-            </div>
-        </div>
-
-        
-        <h3>justify-content</h3>
-        <p>Define o alinhamento dos itens ao longo do eixo principal e auxilia na distribuição do espaço disponível dentro do contêiner.</p>
-        <p>Valores:</p>
-        <ul>
-            <li>flex-start: os ítens são alinhados junto à borda de início. (padrão)</li>
-            <li>flex-end: os ítens são alinhados junto à borda final.</li>
-            <li>center: os ítens são centralizados na linha.</li>
-            <li>space-between: os ítens são distribuídos de forma igual ao longo da linha.</li>
-            <li>space-around: os ítens são distribuídos na linha com o mesmo espaçamento entre eles.</li>
-            <li>space-evenly: os ítens são distribuídos de forma que o espaçamento entre quaisquer dois itens da linha seja igual.</li>
-        </ul>
-
-        <p>Exemplos:</p>
+        <p class="exemplos">Exemplos:</p>
         <p>justify-content: flex-start</p>
         <div class="flex-start">
-            <div class="contido">1</div>
-            <div class="contido">2</div>
-            <div class="contido">3</div>
+          <div class="contido">1</div>
+          <div class="contido">2</div>
+          <div class="contido">3</div>
         </div>
 
         <p>justify-content: flex-end</p>
         <div class="flex-end">
-            <div class="contido">1</div>
-            <div class="contido">2</div>
-            <div class="contido">3</div>
+          <div class="contido">1</div>
+          <div class="contido">2</div>
+          <div class="contido">3</div>
         </div>
 
         <p>justify-content: center</p>
         <div class="flex-center">
-            <div class="contido">1</div>
-            <div class="contido">2</div>
-            <div class="contido">3</div>
+          <div class="contido">1</div>
+          <div class="contido">2</div>
+          <div class="contido">3</div>
         </div>
 
         <p>justify-content: space-between</p>
         <div class="flex-space-between">
-            <div class="contido">1</div>
-            <div class="contido">2</div>
-            <div class="contido">3</div>
+          <div class="contido">1</div>
+          <div class="contido">2</div>
+          <div class="contido">3</div>
         </div>
 
         <p>justify-content: flex-space-around</p>
         <div class="flex-space-around">
-            <div class="contido">1</div>
-            <div class="contido">2</div>
-            <div class="contido">3</div>
+          <div class="contido">1</div>
+          <div class="contido">2</div>
+          <div class="contido">3</div>
         </div>
 
         <p>justify-content: flex-space-evenly</p>
         <div class="flex-space-evenly">
-            <div class="contido">1</div>
-            <div class="contido">2</div>
-            <div class="contido">3</div>
+          <div class="contido">1</div>
+          <div class="contido">2</div>
+          <div class="contido">3</div>
         </div>
+      </div>
+    </section>
 
-        
-        <h3>align-itens</h3>
-        <p>Estabelece o comportamento padrão para o alinhamento dos itens flexíveis de acordo com o eixo transversal.</p>
+    <section id="align-itens">
+      <div class="titulo">align-itens</div>
+      <div class="descricao">
+        <p>
+          Estabelece o comportamento padrão para o alinhamento dos itens
+          flexíveis de acordo com o eixo transversal.
+        </p>
         <p>Valores:</p>
         <ul>
-            <li>stretch: estica os ítens para preencher o container. (padrão)</li>
-            <li>flex-start: ítens são posicionados no início do eixo transversal.</li>
-            <li>flex-end: ítens são posicionados no final do eixo transversal.</li>
-            <li>center: ítens são centralizados no eixo transversal.</li>
-            <li>baseline: ítens são alinhados de acordo com suas baselines.</li>
+          <li>stretch: estica os ítens para preencher o container. (padrão)</li>
+          <li>
+            flex-start: ítens são posicionados no início do eixo transversal.
+          </li>
+          <li>
+            flex-end: ítens são posicionados no final do eixo transversal.
+          </li>
+          <li>center: ítens são centralizados no eixo transversal.</li>
+          <li>baseline: ítens são alinhados de acordo com suas baselines.</li>
         </ul>
 
-        <p>Exemplos:</p>
+        <p class="exemplos">Exemplos:</p>
         <p>align-itens: stretch</p>
         <div class="ai-stretch">
-            <div class="contido-stretch">1</div>
-            <div class="contido-stretch">2</div>
-            <div class="contido-stretch">3</div>
+          <div class="contido-stretch">1</div>
+          <div class="contido-stretch">2</div>
+          <div class="contido-stretch">3</div>
         </div>
 
         <p>align-itens: flex-start</p>
         <div class="ai-flex-start">
-            <div class="contido">1</div>
-            <div class="contido">2</div>
-            <div class="contido">3</div>
+          <div class="contido">1</div>
+          <div class="contido">2</div>
+          <div class="contido">3</div>
         </div>
 
         <p>align-itens: flex-end</p>
         <div class="ai-flex-end">
-            <div class="contido">1</div>
-            <div class="contido">2</div>
-            <div class="contido">3</div>
+          <div class="contido">1</div>
+          <div class="contido">2</div>
+          <div class="contido">3</div>
         </div>
 
         <p>align-itens: center</p>
         <div class="ai-center">
-            <div class="contido">1</div>
-            <div class="contido">2</div>
-            <div class="contido">3</div>
+          <div class="contido">1</div>
+          <div class="contido">2</div>
+          <div class="contido">3</div>
         </div>
 
         <p>align-itens: baseline</p>
         <div class="ai-baseline">
-            <div class="contido">1</div>
-            <div class="contido">2</div>
-            <div class="contido">3</div>
+          <div class="contido">1</div>
+          <div class="contido">2</div>
+          <div class="contido">3</div>
         </div>
-
-        <h3>align-content</h3>
-        <p>Organiza as linhas dentro de um contêiner flexível quando há espaço extra no eixo transversal, semelhante ao modo como justify-content alinha os itens individuais ao longo do eixo principal.</p>
+      </div>
+    </section>
+    <section id="align-content">
+      <div class="titulo">align-content</div>
+      <div class="descricao">
+        <p>
+          Organiza as linhas dentro de um contêiner flexível quando há espaço
+          extra no eixo transversal, semelhante ao modo como justify-content
+          alinha os itens individuais ao longo do eixo principal.
+        </p>
         <p>Valores:</p>
         <ul>
-            <li>stretch: ítens em cada linha esticam para ocupar o espaço remanescente entre elas. (padrão)</li>
-            <li>flex-start: ítens alinhados com o início do container.</li>
-            <li>flex-end: ítens alinhados com o final do container.</li>
-            <li>center: ítens centralizados no container.</li>
-            <li>space-between: ítens distribuídos igualmente; a primeira linha junto ao início do container e a última linha junto ao final do container.</li>
-            <li>space-around: ítens distribuídos igualmente com o mesmo espaçamento entre cada linha.</li>
-            <li>space-evenly: ítens distribuídos igualmente com o mesmo espaçamento entre eles.</li>
+          <li>
+            stretch: ítens em cada linha esticam para ocupar o espaço
+            remanescente entre elas. (padrão)
+          </li>
+          <li>flex-start: ítens alinhados com o início do container.</li>
+          <li>flex-end: ítens alinhados com o final do container.</li>
+          <li>center: ítens centralizados no container.</li>
+          <li>
+            space-between: ítens distribuídos igualmente; a primeira linha junto
+            ao início do container e a última linha junto ao final do container.
+          </li>
+          <li>
+            space-around: ítens distribuídos igualmente com o mesmo espaçamento
+            entre cada linha.
+          </li>
+          <li>
+            space-evenly: ítens distribuídos igualmente com o mesmo espaçamento
+            entre eles.
+          </li>
         </ul>
 
-        <p>Exemplos:</p>
+        <p class="exemplos">Exemplos:</p>
         <p>align-content: stretch</p>
         <div class="ac-stretch">
-            <div class="contido-stretch">1</div>
-            <div class="contido-stretch">2</div>
-            <div class="contido-stretch">3</div>
+          <div class="contido-stretch">1</div>
+          <div class="contido-stretch">2</div>
+          <div class="contido-stretch">3</div>
         </div>
 
         <p>align-content: flex-start</p>
         <div class="ac-flex-start">
-            <div class="contido">1</div>
-            <div class="contido">2</div>
-            <div class="contido">3</div>
+          <div class="contido">1</div>
+          <div class="contido">2</div>
+          <div class="contido">3</div>
         </div>
 
         <p>align-content: flex-end</p>
         <div class="ac-flex-end">
-            <div class="contido">1</div>
-            <div class="contido">2</div>
-            <div class="contido">3</div>
+          <div class="contido">1</div>
+          <div class="contido">2</div>
+          <div class="contido">3</div>
         </div>
 
         <p>align-content: center</p>
         <div class="ac-center">
-            <div class="contido">1</div>
-            <div class="contido">2</div>
-            <div class="contido">3</div>
+          <div class="contido">1</div>
+          <div class="contido">2</div>
+          <div class="contido">3</div>
         </div>
 
         <p>align-content: space-between</p>
         <div class="ac-space-between">
-            <div class="contido-ac">1</div>
-            <div class="contido-ac">2</div>
-            <div class="contido-ac">3</div>
+          <div class="contido-ac">1</div>
+          <div class="contido-ac">2</div>
+          <div class="contido-ac">3</div>
         </div>
 
         <p>align-content: space-around</p>
         <div class="ac-space-around">
-            <div class="contido-ac">1</div>
-            <div class="contido-ac">2</div>
-            <div class="contido-ac">3</div>
+          <div class="contido-ac">1</div>
+          <div class="contido-ac">2</div>
+          <div class="contido-ac">3</div>
         </div>
 
         <p>align-content: space-evenly</p>
         <div class="ac-space-evenly">
-            <div class="contido-ac">1</div>
-            <div class="contido-ac">2</div>
-            <div class="contido-ac">3</div>
+          <div class="contido-ac">1</div>
+          <div class="contido-ac">2</div>
+          <div class="contido-ac">3</div>
         </div>
+      </div>
+    </section>
 
-        <h3>Propriedades para os elementos filhos</h3>
-        <p>Em um contexto em que um elemento-pai possui a propriedade "display: flex", é possível aplicar propriedades flex específicas aos elementos-filhos desse contêiner.
-        </p>
-
-        <h3>order</h3>
+    <section id="order">
+      <div class="titulo">order</div>
+      <div class="descricao">
         <p>Determina a ordem em que os elementos aparecerão.</p>
 
-        <p>Exemplos:</p>
+        <p class="exemplos">Exemplos:</p>
         <p>order:</p>
         <div class="container">
-            <div class="contido-order">1</div>
-            <div class="contido-order1">order: -1</div>
-            <div class="contido-order">3</div>
+          <div class="contido-order">1</div>
+          <div class="contido-order1">order: -1</div>
+          <div class="contido-order">3</div>
         </div>
+      </div>
+    </section>
 
-        <h3>flex-grow</h3>
+    <section id="flex-grow">
+      <div class="titulo">flex-grow</div>
+      <div class="descricao">
         <p>Define a habilidade de um flex item de crescer, caso necessário.</p>
 
-        <p>Exemplos:</p>
+        <p class="exemplos">Exemplos:</p>
         <p>order:</p>
         <div class="container">
-            <div class="contido-grow">1</div>
-            <div class="contido-grow2">flex-grow: 1</div>
-            <div class="contido-grow">3</div>
+          <div class="contido-grow">1</div>
+          <div class="contido-grow2">flex-grow: 1</div>
+          <div class="contido-grow">3</div>
         </div>
+      </div>
+    </section>
 
-        <h3>align-self</h3>
-        <p>Permite que o alinhamento padrão (ou o que estiver definido por align-items) seja sobrescrito para ítens individuais.</p>
+    <section id="align-self">
+      <div class="titulo">align-self</div>
+      <div class="descricao">
+        <p>
+          Permite que o alinhamento padrão (ou o que estiver definido por
+          align-items) seja sobrescrito para ítens individuais.
+        </p>
 
-        <p>Exemplos:</p>
+        <p class="exemplos">Exemplos:</p>
         <p>order:</p>
         <div class="container">
-            <div class="contido-as-start">align-self: start</div>
-            <div class="contido-as-center">alig-self: center</div>
-            <div class="contido-as-end">alig-self: end</div>
+          <div class="contido-as-start">align-self: start</div>
+          <div class="contido-as-center">alig-self: center</div>
+          <div class="contido-as-end">alig-self: end</div>
         </div>
-    </main>
-</body>
+      </div>
+    </section>
+  </body>
 </html>
