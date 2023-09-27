@@ -15,18 +15,48 @@
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     line-height: 28px;
+    scroll-behavior: smooth;
     
 }
 header{
     text-align: center;
-    padding: 1rem;
-    background-color: var(--cor-quaternaria);
+    background-color: var(--cor-q);
     color: #FFF;
     letter-spacing: 2px;
     position: sticky;
-    top: 0;
+    top: -0.8rem;
 }
-#intro, #guia, #display, #flex-direction, #flex-wrap, #justify-content, #align-itens, #align-content, #order,#flex-grow,#align-self{
+
+footer{
+    text-align: center;
+    background-color: var(--cor-q);
+    color: #FFF;
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+
+ul li a{
+    color: var(--cor-s);
+    text-decoration: none;
+}
+
+ul li a:hover{
+    color: var(--cor-q);
+    text-decoration: underline;
+    font-weight: 900;
+}
+
+.titulo {
+    background-color: var(--cor-secundaria);
+    border-left: solid 10px var(--cor-q);
+    padding: 0.1rem 0 0.1rem 0.2rem ;
+}
+
+.exemplos {
+    font-weight: 500;
+}
+
+#intro, #guia, #display, #flex-direction, #flex-wrap, #justify-content, #align-itens, #align-content, #order,#flex-grow,#align-self, #flex-flow{
     padding: 1rem;
 }
 
@@ -37,12 +67,13 @@ header{
     color: var(--cor-s);
 }
 
-.descricao {
+.descricao, .guia {
     background-color: var(--cor-primaria);
     padding: 0.6rem;
     padding: 0.8rem;
     line-height: 28px;
     text-align: justify;
+    border: 1px solid var(--cor-secundaria);
     
 }
 
@@ -81,54 +112,56 @@ ul {
     margin: 10px;
     color: var(--cor-s);
     text-align: center;
+   
 }
 
 .contido-stretch{
     width: 50px;
-    background-color: aqua;
+    background-color: var(--cor-terciaria);
     border:  1px solid #000;
     margin: 10px;
 }
 
 .contido-ac{
     width: 500px;
-    background-color: aqua;
+    background-color: var(--cor-terciaria);
     border:  1px solid #000;
     margin: 10px;
 }
 
 .contido-order{
     width: 100px;
-    background-color: aqua;
+    background-color: var(--cor-terciaria);
     border:  1px solid #000;
     margin: 10px;
 }
 
 .contido-order1{
     width: 100px;
-    background-color: aqua;
+    background-color: var(--cor-terciaria);
     border:  1px solid #000;
     margin: 10px;
+    order: -1;
 }
 
 .contido-grow{
-    background-color: aqua;
+    background-color: var(--cor-terciaria);
     width: 100px;
     border:  1px solid #000;
     margin: 10px;
 }
 
 .contido-grow2{
-    background-color: aqua;
     width: 100px;
+    background-color: var(--cor-terciaria);
     border:  1px solid #000;
     margin: 10px;
-    flex-shrink: 1;
+    flex-grow: 1;
  
 }
 
 .contido-as-start{
-    background-color: aqua;
+    background-color: var(--cor-terciaria);
     width: 100px;
     border:  1px solid #000;
     margin: 10px;
@@ -136,7 +169,7 @@ ul {
 }
 
 .contido-as-end{
-    background-color: aqua;
+    background-color: var(--cor-terciaria);
     width: 100px;
     border:  1px solid #000;
     margin: 10px;
@@ -144,7 +177,7 @@ ul {
 }
 
 .contido-as-center{
-    background-color: aqua;
+    background-color: var(--cor-terciaria);
     width: 100px;
     border:  1px solid #000;
     margin: 10px;
@@ -354,4 +387,66 @@ ul {
     background-color: var(--cor-secundaria);
     align-content: space-evenly;
     height: 200px;
+}
+
+.flex-flow-row-nowrap {
+    display: flex;
+    background-color: var(--cor-secundaria);
+    height: 200px;
+    width: 100px;
+    flex-flow: row nowrap;
+    margin-right: 1rem;
+}
+
+
+.flex-flow-rowwrap {
+    display: flex;
+    background-color:var(--cor-secundaria);
+    height: 200px;
+    width: 200px;
+    flex-flow: row wrap;
+}
+
+.flex-flow-column-nowrap {
+    display: flex;
+    background-color: var(--cor-secundaria);
+    height: 180px;
+    width: 100px;
+    flex-flow: column nowrap;
+    margin-bottom: 1rem;
+}
+
+
+.flex-flow-column-wrap {
+    display: flex;
+    background-color:var(--cor-secundaria);
+    height: 200px;
+    width: 200px;
+    flex-flow: column wrap;
+}
+
+
+
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 10px;
+    right: 15px;
+    width: 32px;
+    height: 24px;
+    background-color: #000;
+    text-decoration: none;
+    opacity: 40%;
+}
+.btn::after {
+    content: "↑";
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--cor-primaria);
+}
+.btn:hover::after {
+    margin-top:-8px;
 }
