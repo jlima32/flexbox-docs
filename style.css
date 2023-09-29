@@ -440,13 +440,5 @@ ul {
     background-color: #000;
     text-decoration: none;
     opacity: 40%;
-}
-.btn::after {
-    content: "↑";
-    font-size: 24px;
-    font-weight: bold;
     color: var(--cor-primaria);
-}
-.btn:hover::after {
-    margin-top:-8px;
 }
